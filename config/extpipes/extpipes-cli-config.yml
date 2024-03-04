@@ -49,3 +49,19 @@ rawdbs:
                         email: schmit.clement@yahoo.fr
                         role: Bootcamp 02 Administrator
                         send-notification: false
+    - rawdb-name: src:002:opcua:db
+      dataset-external-id: src:002:opcua:ds
+      short-name: opcua
+      rawtables:
+          - rawtable-name: datapoints
+            pipelines:
+        # source is a short-name identifying the pipeline source being
+        # a 'db-extractor (db)', an 'Azure Function (az-func)',
+        # or 'Azure Data Factory (adf)', 'Python script (py)', ..
+                - source: ice-cream-api
+                  schedule: On trigger
+                  contacts:
+                      - name: Clement
+                        email: schmit.clement@yahoo.fr
+                        role: Bootcamp 02 Administrator
+                        send-notification: false
